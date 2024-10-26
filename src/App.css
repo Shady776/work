@@ -1,38 +1,335 @@
-.App {
-  text-align: center;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #6a0dad;
+  overflow: scroll;
+  height: 100vh;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Mobile Layout */
+.mobile-app {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+/* Purple Header Section */
+.header {
+  background-color: #6a0dad;
+  padding: 100px 20px 30px 20px;
+  text-align: center;
+  color: white;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-top: 5px;
+}
+.header h2{
+  font-size: 14px;
+  font-weight: 200;
+}
+/* White Content Section */
+.content {
+  background-color: white;
+  flex: 1;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* Card Section */
+.card-section h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 23px;
+}
+
+.cards {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 15px;
+  background-color: white;
+  border-radius: 20px;
+  color: black;
+  text-align: left;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.white-card{
+
+}
+.pink-card {
+  background-color: #ff7eb9;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Favorites Section */
+.favorites h3 {
+  margin-bottom: 10px;
+}
+.favorites{
+  margin-top: 50px;
+}
+.favorite-users {
+  display: flex;
+  position: relative;
+  margin-top: 10px;
+  width: 150px;
+}
+
+/* Overlapping Avatars */
+.avatar {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: #ddd;
+  margin-left: 10px;
+}
+.avatar234{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: #ddd;
+}
+.image234 img{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: #ddd;
+}
+.avatar:nth-child(2) {
+  left: 20px;
+}
+.avatar:nth-child(3) {
+  left: 40px;
+}
+.avatar:nth-child(4) {
+  left: 60px;
+}
+.avatar:nth-child(5) {
+  left: 80px;
+}
+
+
+
+.avatar234:nth-child(2) {
+  left: 20px;
+}
+.avatar234:nth-child(3) {
+  left: 40px;
+}
+.avatar234:nth-child(4) {
+  left: 60px;
+}
+.avatar234:nth-child(5) {
+  left: 80px;
+}
+
+
+
+/* Selected Section */
+.selected-section {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selected-user {
+  display: flex;
+  align-items: center;
+}
+
+.selected-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-right: 15px;
+}
+
+.selected-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.selected-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.selected-amount {
+  font-size: 18px;
+  color: #6a0dad;
+}
+
+/* Send Button */
+.send-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff66b2;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.send-button:hover {
+  background-color: #ff3385;
+}
+
+.sections{
+  margin-top: 50px;
+}
+.sections h3{
+  color: gray;
+  font-size: 16px; 
+}
+.section001{
+  display: flex;
+  justify-content: space-between;
+}
+.section001 p{
+  margin-top: 16px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.section001 img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.button1{
+  width: 45%;
+  height: 70px;
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button2{
+  width: 45%;
+  height: 70px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: #ff66b2;
+  font-size: 20px;
+  font-weight: bold;
+}
+.buttonss{
+  margin-top: 50px;
+  /* width: 110%; */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.visa-logo {
+  width: 50px;
+  margin-bottom: 30px; 
+}
+
+.menudesgn{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.arrowback img{
+  height: 20px;
+  width: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.ham img{
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.checking{
+  display: flex;
+  gap: 100px;
+  margin-bottom: 50px;
+}
+
+
+
+
+.favorites-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Overlapping circles for favorites */
+.favorite-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: lightgrey;
+  border: 2px solid white;
+  margin-left: -10px; /* Overlap effect */
+}
+
+/* Add icon with broken circle */
+.add-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: -10px;
+  border: 2px solid white;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-icon::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px dashed #333; /* Broken circle */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-icon::after {
+  content: "+";
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  position: absolute;
+}
+.favouritesss{
+  margin-top: 60px;
+}
+.favouritesss h3{
+  font-size: 23px;
 }
